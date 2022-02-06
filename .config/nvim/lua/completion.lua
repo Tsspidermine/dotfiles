@@ -75,3 +75,7 @@
   require('lspconfig')['rust_analyzer'].setup {
     capabilities = capabilities
   }
+
+  require('lspconfig')['pyright'].setup {
+    capabilities = capabilities
+  }
