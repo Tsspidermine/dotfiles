@@ -1,0 +1,16 @@
+configuration {
+	modi: "drun,window";
+	font: "Source Code Pro 12";
+	show-icons: true;
+	icon-theme: "Papirus";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "lucid"

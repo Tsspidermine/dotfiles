@@ -1,0 +1,22 @@
+@import "config"
+
+configuration {
+	show-icons: false;
+}
+
+window {
+	width: 25%;
+	location: northeast;
+	y-offset: 27;
+}
+
+listview {
+	layout: horizontal;
+	fixed-height: true;
+	spacing: 15;
+	scrollbar: false;
+}
+
+inputbar {
+	enabled: false;
+}

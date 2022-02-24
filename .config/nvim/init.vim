@@ -7,8 +7,6 @@
 :set mouse=a
 :set termguicolors
 
-let g:airline#extensions#whitespace#enabled = 0
-
 call plug#begin()
 
 Plug 'cseelus/vim-colors-lucid'
@@ -16,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tc50cal/vim-terminal'
@@ -40,6 +39,7 @@ Plug 'christoomey/vim-system-copy'
 call plug#end()
 
 colorscheme lucid
+let g:airline#extensions#whitespace#enabled = 0
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
