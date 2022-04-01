@@ -3,9 +3,12 @@
 :set tabstop=4
 :set shiftwidth=4
 :set smarttab
-:set softtabstop=4
+:set expandtab
+:set softtabstop=-1
 :set mouse=a
 :set termguicolors
+
+:set backspace=indent,eol,start
 
 call plug#begin()
 
@@ -35,6 +38,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'christoomey/vim-system-copy'
+Plug 'dag/vim-fish'
 
 call plug#end()
 
@@ -46,6 +50,8 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 set completeopt=menu,menuone,noselect
+
+filetype plugin indent on
 
 lua <<EOF
 	require("completion")

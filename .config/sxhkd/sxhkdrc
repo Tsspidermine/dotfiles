@@ -124,6 +124,9 @@ super + {Left,Down,Up,Right}
 super + {F9,F10}
 	pulseaudio-ctl {down,up} 5
 
+super + F8
+    pulseaudio-ctl mute
+
 # increase and decrease backlight brightness
 super + {F6,F7}
 	xbacklight -{dec,inc} 10

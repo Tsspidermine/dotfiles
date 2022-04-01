@@ -27,7 +27,7 @@ case $chosen in
 	$POWEROFF)
 		ans=$(confirm_exit &)	
 		if [[ $ans == "yes" || $ans == "y" ]]; then
-			systemctl poweroff
+			sudo poweroff
 		elif [[ $ans == "no" || $ans == "n" || $ans == "" ]]; then
 			exit 0
 		else
@@ -37,7 +37,7 @@ case $chosen in
 	$REBOOT)
 		ans=$(confirm_exit &)	
 		if [[ $ans == "yes" || $ans == "y" ]]; then
-			systemctl reboot
+			sudo reboot
 		elif [[ $ans == "no" || $ans == "n" || $ans == "" ]]; then
 			exit 0
 		else
