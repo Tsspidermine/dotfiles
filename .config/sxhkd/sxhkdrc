@@ -122,10 +122,10 @@ super + {Left,Down,Up,Right}
 
 # increase and decrease volume
 super + {F9,F10}
-	pulseaudio-ctl {down,up} 5
+    /home/tsspidermine/.bin/change_volume.sh {down,up}
 
 super + F8
-    pulseaudio-ctl mute
+    /home/tsspidermine/.bin/change_volume.sh mute
 
 # increase and decrease backlight brightness
 super + {F6,F7}
