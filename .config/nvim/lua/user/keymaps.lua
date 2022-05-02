@@ -34,6 +34,7 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>t", ":NvimTreeFocus<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
