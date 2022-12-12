@@ -122,11 +122,11 @@ super + {Left,Down,Up,Right}
 
 # increase and decrease volume
 super + {F9,F10}
-    pulseaudio-ctl {down,up} 5
+    pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 
 super + F8
-    pulseaudio-ctl mute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # increase and decrease backlight brightness
 super + {F6,F7}
-	xbacklight -{dec,inc} 10
+    light -{U,A} 10

@@ -14,10 +14,11 @@ xset fp rehash &
 xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
 
-# Launch some apps
-nitrogen --restore &
-dunst &
-picom --experimental-backends &
 
 sxhkd &
 bspwm
+
+# Launch some apps
+nitrogen --restore &
+dunst &
+picom &

@@ -1,23 +1,24 @@
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
+-- TO DELETE LATER
+-- vim.g.nvim_tree_icons = {
+--   default = "",
+--   symlink = "",
+--   git = {
+--     unstaged = "",
+--     staged = "S",
+--     unmerged = "",
+--     renamed = "➜",
+--     deleted = "",
+--     untracked = "U",
+--     ignored = "◌",
+--   },
+--   folder = {
+--     default = "",
+--     open = "",
+--     empty = "",
+--     empty_open = "",
+--     symlink = "",
+--   },
+-- }
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -31,15 +32,16 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-vim.g['nvim_tree_root_folder_modifier'] = ":t"
-vim.g['nvim_tree_show_icons'] = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-}
-vim.g['nvim_tree_git_hl'] = 1
+-- TO DELETE LATER
+-- vim.g['nvim_tree_root_folder_modifier'] = ":t"
+-- vim.g['nvim_tree_show_icons'] = {
+--     git = 1,
+--     folders = 1,
+--     files = 1,
+--     folder_arrows = 1,
+--     tree_width = 30,
+-- }
+-- vim.g['nvim_tree_git_hl'] = 1
 
 -- Autoclose when nvim-tree is the last open window
 vim.cmd [[ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif ]]
@@ -81,7 +83,6 @@ nvim_tree.setup {
   },
   view = {
     width = 30,
-    height = 30,
     hide_root_folder = false,
     side = "left",
     mappings = {
@@ -104,5 +105,36 @@ nvim_tree.setup {
       open_file = {
           quit_on_open = false,
       },
+  },
+  renderer = {
+      icons = {
+          show = {
+              file = true,
+              folder = true,
+              folder_arrow = true,
+          },
+          glyphs = {
+              default = "",
+              symlink = "",
+              git = {
+                  unstaged = "",
+                  staged = "S",
+                  unmerged = "",
+                  renamed = "➜",
+                  deleted = "",
+                  untracked = "U",
+                  ignored = "◌",
+              },
+              folder = {
+                  default = "",
+                  open = "",
+                  empty = "",
+                  empty_open = "",
+                  symlink = "",
+              },
+          },
+      },
+      highlight_git = true,
+      root_folder_modifier = ":t"
   },
 }

@@ -91,6 +91,10 @@ return packer.startup(function(use)
     -- Lualine
     use "nvim-lualine/lualine.nvim"
 
+    -- EWW
+    use "elkowar/yuck.vim"
+    use "gpanders/nvim-parinfer"
+
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then
         require("packer").sync()

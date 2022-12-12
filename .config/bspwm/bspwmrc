@@ -1,11 +1,8 @@
 #! /bin/sh
 
 # Launch programs at start
-nitrogen --restore &
-xsetroot -cursor_name left_ptr &
 $HOME/.config/polybar/launch.sh
-dunst &
-picom -f &
+picom &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
